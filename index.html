@@ -22,10 +22,10 @@
         <section class="interactions">
 
             <div class="btn-music">
-                <button onclick="modal.open()">Peça uma música!</button </div>>
+                <button onclick="modalMusic.open()">Peça uma música!</button </div>>
 
                 <div class="btn-scrap">
-                    <button>Mande um recado!</button>
+                    <button onclick="modalScrap.open()">Mande um recado!</button>
                 </div>
 
         </section>
@@ -37,48 +37,73 @@
                 <a href="index.html"><img src="./assets/logo_jf.png" alt="">
                 </a>
             </div>
-            
+
             <div class="card">
                 <p>Juiz de Fora - MG</p>
             </div>
-            
+
             <div class="card">
                 <ul class="icons-footer">
                     <li><a href="http://"><img src="./assets/instagram.png" alt="Instagram JF Sambis"></a></li>
                     <li><a href="http://"><img src="./assets/facebook.svg" alt="Instagram JF Sambis"></a></li>
-                    
+
                 </ul>
-            </div>         
-            
-        
+            </div>
+
+
     </footer>
 
-    <div class="modal-overlay ">
+    <div class="modal-overlayMusic ">
+        <div class="modal">
+            <div id="form">
+                <h2>Peça uma música!</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class='sr-only' for="name">Seu nome</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="input-group">
+                        <label class='sr-only' for="music">Música</label>
+                        <input type="text" id="music" name="music" place="Digite o nome da música">
+                        <small class="alternative">Caso não se lembre, digite o nome da Banda/Artista</small>
+                    </div>
+
+
+                    <div class="input-group actions">
+                        <a href="#" onclick="modalMusic.close()" class="button cancel">Voltar</a>
+                        <button type="submit">Enviar <img src="./assets/send.png" alt="enviar"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlayScrap ">
         <div class="modal">
 
             <div id="form">
-                <h2>Nova Transação</h2>
+                <h2>Mande um recado!</h2>
                 <form action="">
                     <div class="input-group">
-                        <label class='sr-only' for="description">Descrição</label>
-                        <input type="text" id="description" name="description" placeholder="Descrição">
+                        <label class='sr-only' for="name">Seu nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome">
                     </div>
 
                     <div class="input-group">
-                        <label class='sr-only' for="amount">Descrição</label>
-                        <input type="number" step='0.01' id="amount" name="amount" placeholder="0,00">
-                        <small class="help">Use sinal (-) negativo para despesas e, (vírgula) para casas
-                            decimais</small>
+                        <label class='sr-only' for="scrap">Recado</label>
+                        <input type="textarea" id="scrap" name="music"
+                        rows="5" cols="33" placeholder="Digite seu recado">
+                        <small class="alternative">Sugestões, críticas, elogios, recadinhos para a banda ou outras
+                            mesas!
+                            Pode pedir mais cerveja/drinks ou um abraço para aquele seu amigo/parente. Salve Tim!
+                        </small>
                     </div>
 
-                    <div class="input-group">
-                        <label class='sr-only' for="date">Data</label>
-                        <input type="date" id="date" name="date">
-                    </div>
 
                     <div class="input-group actions">
-                        <a href="#" onclick="modal.close()" class="button cancel">Cancelar</a>
-                        <button type="submit">Salvar</button>
+                        <a href="#" onclick="modalScrap.close()" class="button cancel">Voltar</a>
+                        <button type="submit" onclick="modalScrap.close()">Enviar <img src="./assets/send.png" alt="enviar"></button>
                     </div>
 
                 </form>
