@@ -22,7 +22,7 @@
         <section class="interactions">
 
             <div class="btn-music">
-                <button>Peça uma música!</button </div>>
+                <button onclick="modal.open()">Peça uma música!</button </div>>
 
                 <div class="btn-scrap">
                     <button>Mande um recado!</button>
@@ -48,10 +48,43 @@
                     <li><a href="http://"><img src="./assets/facebook.svg" alt="Instagram JF Sambis"></a></li>
                     
                 </ul>
-            </div>
+            </div>         
             
-        </div>
+        
     </footer>
+
+    <div class="modal-overlay ">
+        <div class="modal">
+
+            <div id="form">
+                <h2>Nova Transação</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class='sr-only' for="description">Descrição</label>
+                        <input type="text" id="description" name="description" placeholder="Descrição">
+                    </div>
+
+                    <div class="input-group">
+                        <label class='sr-only' for="amount">Descrição</label>
+                        <input type="number" step='0.01' id="amount" name="amount" placeholder="0,00">
+                        <small class="help">Use sinal (-) negativo para despesas e, (vírgula) para casas
+                            decimais</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label class='sr-only' for="date">Data</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+
+                    <div class="input-group actions">
+                        <a href="#" onclick="modal.close()" class="button cancel">Cancelar</a>
+                        <button type="submit">Salvar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
