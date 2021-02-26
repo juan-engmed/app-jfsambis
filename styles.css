@@ -19,10 +19,10 @@ body {
   width: min(90vw, 800px);
   margin: auto;
   
-  -webkit-animation: fadeIn 2.5s ease-in-out;
-  -moz-animation: fadeIn 2.5s ease-in-out;
-  -o-animation: fadeIn 2.5s ease-in-out;
-  animation: fadeIn 2.5s ease-in-out;
+  -webkit-animation: fadeIn 1.0s ease-in-out;
+  -moz-animation: fadeIn 1.0s ease-in-out;
+  -o-animation: fadeIn 1.0s ease-in-out;
+  animation: fadeIn 1.0s ease-in-out;
 }
 
 
@@ -239,11 +239,15 @@ footer div li {
 
   opacity: 0;
   visibility: hidden;
+
+  transition:all 0.7s ease-in-out;
 }
 
 .modal-overlayMusic.active, .modal-overlayScrap.active {
   opacity: 1;
   visibility: visible;
+    
+  transition:all 1s ease-in-out;
 }
 
 .modal {
